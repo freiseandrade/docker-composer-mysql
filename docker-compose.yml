@@ -1,0 +1,12 @@
+version: '3.3'
+volumes:
+  vol-data-mysql-dev:
+services:
+  db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - vol-data-mysql-dev:/var/lib/mysql
+    environment: 
+      - MYSQL_ROOT_PASSWORD=123456
